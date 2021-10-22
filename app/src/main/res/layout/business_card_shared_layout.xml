@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/businessCard_action"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_visiting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/font_4dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/font_8dp">
+
+            <LinearLayout
+                android:id="@+id/parent_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginHorizontal="@dimen/font_12dp"
+                    android:layout_marginVertical="@dimen/font_32dp"
+                    android:layout_weight="70"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginVertical="@dimen/font_8dp"
+                        android:gravity="start|center"
+                        android:text="XYZ"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginVertical="@dimen/font_8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="start|center"
+                        android:text="@string/address"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvmobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:drawableLeft="@drawable/ic_android_phone"
+                        android:drawablePadding="@dimen/font_8dp"
+                        android:drawableTint="@color/white"
+                        android:gravity="left|center"
+                        android:text="9907924534"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/font_8dp"
+                    android:layout_marginVertical="@dimen/font_20dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginHorizontal="@dimen/font_12dp"
+                        android:layout_marginVertical="@dimen/font_20dp"
+                        android:background="@drawable/circle_shadow"
+                        android:gravity="right|center"
+                        android:padding="@dimen/font_4dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/RippleStyleWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile"
+                                android:layout_width="96dp"
+                                android:layout_height="96dp"
+                                android:layout_gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/ic_profile" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnshareCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/font_8dp"
+            android:layout_marginVertical="@dimen/font_20dp"
+            android:background="@drawable/verify_button_dark"
+            android:drawableRight="@drawable/ic_whatsapp"
+            android:drawablePadding="@dimen/font_20dp"
+            android:paddingHorizontal="@dimen/font_12dp"
+            android:text="Share"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

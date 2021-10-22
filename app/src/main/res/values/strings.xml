@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Aaroo</string>
+    <string name="verify">Verify Mobile</string>
+    <string name="address">Your business card also has to contain the important information people need to get in touch.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_name">User Name</string>
+    <string name="nav_header_subtitle">+91</string>
+    <string name="nav_account">Account</string>
+    <string name="nav_setting">Setting</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_logout">Sign Out</string>
+    <string name="nav_help">Help &amp; Support</string>
+    <string name="verify_txt">Enter verification code sent to </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search">Search</string>
+    <string name="send_to">Visiting Card</string>
+    <string name="mobileMsg">Enter your new mobile number </string>
+    <string name="msg1">Changing number will migrate all your data to the new number.</string>
+    <string name="msg2">Make sure,you are able to receive SMS on new number.</string>
+    <string name="msg3">An OTP will be send on  to verify the user </string>
+    <string name="btnverify">Verify Mobile</string>
+    <string name="reminderMsg">Payment Reminder</string>
+
+
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+
+    <style name="full_screen_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+</resources>

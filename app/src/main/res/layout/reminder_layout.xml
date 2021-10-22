@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/businessCard_action"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_visiting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/font_8dp"
+            android:padding="@dimen/font_4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/font_8dp"
+            app:cardElevation="@dimen/font_8dp">
+
+            <LinearLayout
+                android:id="@+id/parent_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/font_8dp"
+                android:background="@drawable/input_box"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/font_8dp"
+                    android:layout_marginVertical="@dimen/font_4dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/font_12dp"
+                        android:background="@drawable/circle_shadow"
+                        android:gravity="center"
+                        android:padding="@dimen/font_4dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_profile" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginHorizontal="@dimen/font_12dp"
+                    android:layout_marginBottom="@dimen/font_12dp"
+                    android:layout_weight="70"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="SALOJ HATHILE"
+                        android:textColor="@color/grey_600"
+                        android:textSize="@dimen/font_20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/font_4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/reminderMsg"
+                        android:textColor="@color/grey_500"
+                        android:textSize="@dimen/font_16sp" />
+
+                    <TextView
+                        android:id="@+id/tvamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="₹ 0"
+                        android:textColor="@color/red_300"
+                        android:textSize="@dimen/font_20sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvmobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="To : 9907924534"
+                        android:textColor="@color/grey_500"
+                        android:textSize="@dimen/font_14dp" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/font_8dp"
+                    android:background="@color/grey_300" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/font_8dp"
+                    android:layout_marginTop="@dimen/font_8dp"
+                    android:layout_marginBottom="@dimen/font_8dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/font_32dp"
+                        android:layout_height="@dimen/font_32dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tvAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginVertical="@dimen/font_4dp"
+                        android:layout_marginLeft="@dimen/font_4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="start|center"
+                        android:text="Aaroo Verified"
+                        android:textColor="@color/grey_500"
+                        android:textSize="@dimen/font_12sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/tvDue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/font_4dp"
+                        android:layout_marginLeft="@dimen/font_4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Due as on : XX Month"
+                        android:textColor="@color/grey_500"
+                        android:textSize="@dimen/font_12sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnshareCard"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginVertical="@dimen/font_20dp"
+            android:background="@drawable/blue_ellipse_bg"
+            android:drawableRight="@drawable/ic_share_next"
+            android:drawablePadding="@dimen/font_12dp"
+            android:paddingHorizontal="@dimen/font_12dp"
+            android:text="Share"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+
+
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

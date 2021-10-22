@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/data_cons"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:theme="@style/BottomSheetDialogTheme">
+    <ScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="@dimen/font_12dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/back"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:paddingVertical="@dimen/font_8dp"
+                            android:src="@drawable/ic_arrow_back_24px"
+                            app:tint="@color/white" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im"
+                            android:layout_width="@dimen/edtTextHeight_48dp"
+                            android:layout_height="@dimen/edtTextHeight_48dp"
+                            android:layout_gravity="start|center"
+                            android:src="@drawable/ic_profile" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_marginLeft="@dimen/font_4dp"
+                            android:layout_marginRight="@dimen/font_12dp"
+                            android:gravity="end"
+                            android:text="Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_18sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?actionBarSize"
+                android:orientation="horizontal"
+                android:padding="@dimen/font_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/font_12dp"
+                    android:layout_weight="1"
+                    android:gravity="top|center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_view_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/edtTextHeight_48dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text=" ₹ "
+                            android:textColor="@color/green_300"
+                            android:textSize="@dimen/font_18sp"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/edt_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1236547890."
+                            android:focusedByDefault="true"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey_400"
+                            android:textSize="@dimen/font_28dp"
+                            android:textStyle="bold"
+                            android:theme="@style/themeTextViewPayment" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="128dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/font_8dp"
+                        android:background="@color/grey_300" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/font_28dp"
+                android:background="@drawable/input_box"
+                android:gravity="center"
+                android:paddingVertical="@dimen/font_16sp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_calander"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawableEnd="@drawable/ic_baseline_expand_more_24"
+                    android:drawablePadding="@dimen/font_12dp"
+                    android:paddingHorizontal="@dimen/font_18dp"
+                    android:paddingVertical="@dimen/font_4dp"
+                    android:text="00-00-0000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvcamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/font_20dp"
+                android:background="@drawable/square_bg"
+                android:drawableTop="@drawable/ic_camera"
+                android:padding="@dimen/font_16dp"
+                android:text="Add Bills"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/Imgbill"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/font_20dp"
+                android:src="@drawable/ic_image_gallery"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/font_18dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/inputbox_grey"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="@dimen/font_24dp"
+                android:layout_height="@dimen/font_24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/font_8dp"
+                android:src="@drawable/ic_pen_1_"
+                android:visibility="visible"
+                app:tint="@color/grey_700" />
+
+            <EditText
+                android:id="@+id/edt_notes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtTextHeight_48dp"
+                android:layout_gravity="start|center"
+                android:layout_marginTop="@dimen/font_4dp"
+                android:digits="qwertyuiopasdfghjklzxcvbnm1236547890 "
+                android:hint="Add note (Optional)"
+                android:inputType="textPersonName"
+                android:maxLength="2000"
+                android:maxLines="5"
+                android:paddingLeft="@dimen/font_16dp"
+                android:paddingRight="@dimen/font_8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_14sp"
+                android:theme="@style/themeTextView" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/font_18dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="@dimen/font_24dp">
+
+            <ImageView
+                android:layout_width="@dimen/edtTextHeight_48dp"
+                android:layout_height="@dimen/edtTextHeight_48dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/font_8dp"
+                android:src="@drawable/ic_checked" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_delete"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/red_400"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
